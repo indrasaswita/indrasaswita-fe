@@ -1,0 +1,27 @@
+{
+	"comp-atomic": {
+		"scope": "typescriptreact",
+		"prefix": "comp-atomic",
+		"body": [
+			"import React from \"react\"",
+			"import { Wrapper } from \"./${1:ClassName}.style\"",
+			"",
+			"export interface ${1:ClassName}Props {",
+			"",
+			"}",
+			"",
+			"export const ${1:ClassName}",
+			"  : React.FunctionComponent<${1:ClassName}Props>",
+			"  = (props: ${1:ClassName}Props) => {",
+			"    return (",
+			"      <Wrapper>",
+			"      </Wrapper>",
+			"    )",
+			"  }",
+			"",
+			"export default ${1:ClassName}",
+			"",
+		],
+		"description": "React Redux Component Template"
+	}
+}

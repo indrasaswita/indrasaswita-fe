@@ -1,0 +1,19 @@
+{
+	"comp-style": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "comp-style",
+		"body": [
+			"import styled, { StyledComponent } from \"styled-components\"",
+			"",
+			"export const Wrapper",
+			"  : StyledComponent<\"div\", any, {}, never>",
+			"  = styled.div`",
+			"",
+			"    //",
+			"",
+			"  `",
+			"",
+		],
+		"description": "React Redux Component Template"
+	}
+}

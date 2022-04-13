@@ -1,0 +1,35 @@
+{
+	"comp-redux": {
+		"scope": "typescriptreact",
+		"prefix": "comp-redux",
+		"body": [
+			"import React from \"react\"",
+			"import { connect } from \"react-redux\"",
+			"import { Wrapper } from \"./${1:ClassName}.style\"",
+			"",
+			"interface ${1:ClassName}Props {",
+			"",
+			"}",
+			"",
+			"interface DispatchProps {",
+			"",
+			"}",
+			"",
+			"export type Props = ${1:ClassName}Props & DispatchProps",
+			"export const ${1:ClassName}",
+			"  : React.FunctionComponent<Props>",
+			"  = (props: Props) => {",
+			"    return (",
+			"      <Wrapper>",
+			"      </Wrapper>",
+			"    )",
+			"  }",
+			"",
+			"export default connect(null, {",
+			"",
+			"})(${1:ClassName})",
+			"",
+		],
+		"description": "React Redux Component Template"
+	}
+}

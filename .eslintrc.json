@@ -1,3 +1,106 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+		"browser": true,
+		"es2021": true
+		// "jest/globals": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"next/core-web-vitals",
+		"eslint:recommended"
+		// "plugin:@typescript-eslint/recommended",
+		// "plugin:@typescript-eslint/eslint-recommended"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint"
+		// "jest"
+	],
+  "rules": {
+    "no-unused-vars": "error",
+		"no-dupe-else-if": "error",
+		"no-trailing-spaces": "error",
+		"no-compare-neg-zero": "error",
+    "no-mixed-spaces-and-tabs": "error",
+		"space-unary-ops": "error",
+		"space-in-parens": [
+			"error",
+			"never"
+		],
+		"eol-last": [
+			"error", 
+			"always"
+		],
+		"semi": [
+			"error", 
+			"never"
+		],
+		"comma-dangle": [
+			"error", 
+			"always-multiline"
+		],
+		"space-infix-ops": "error",
+		"comma-spacing": [
+			"error", 
+			{ 
+				"before": false, 
+				"after": true 
+			}
+		],
+		"object-curly-spacing": [
+			"error", 
+			"always"
+		],
+		"indent": [
+			"error", 
+			"tab"
+		],
+		"quotes": [
+			"error",
+			"double",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": false
+			}
+		],
+		"no-cond-assign": [
+			"error", 
+			"always"
+		],
+		"no-multiple-empty-lines": [
+			"error", 
+			{
+				"max": 1,
+				"maxEOF": 1,
+				"maxBOF": 0
+			}
+		],
+		"eqeqeq": [
+			"error", 
+			"always",
+			{ "null": "ignore" }
+		],
+		"operator-linebreak": [
+			"error",
+			"before"
+		],
+		"@typescript-eslint/typedef": [
+			"error",
+			{
+				"arrowParameter": true,
+				"variableDeclaration": true
+			}
+		]
+  },
+	"globals": {
+		"JSX": true,
+		"NodeJS": true
+	}
 }
