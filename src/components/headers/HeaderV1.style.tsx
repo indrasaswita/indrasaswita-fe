@@ -52,23 +52,6 @@ export const Wrapper
 				}
 			}
 
-			.dropdown-account {
-				.btn-toggle {
-					padding: calc(6px + .6vw) calc(8px + .8vw);
-					transition: .2s all;
-					cursor: pointer;
-					border-radius: 8px;
-
-					svg {
-						margin-right: calc(3px + .2vw);
-					}
-
-					&:hover {
-						text-decoration: none;
-						background-color: #FFFFFF22;
-					}
-				}
-			}
 		}
 
 	`

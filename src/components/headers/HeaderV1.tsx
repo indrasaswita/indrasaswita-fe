@@ -1,3 +1,5 @@
+import Button from "@components/atoms/Button"
+import DropdownPopup from "@components/organisms/DropdownPopup"
 import {
 	faMapLocationDot as fadMapLocationDot,
 } from "@fortawesome/pro-duotone-svg-icons"
@@ -62,15 +64,38 @@ export const HeaderV1
 									)
 								})}
 						</ul>
-						<div className="dropdown-account">
-							<div className="btn-toggle">
-								<FontAwesomeIcon
-									icon={falUserCircle}
-									fixedWidth
-								/>
-								User
-							</div>
-						</div>
+						<DropdownPopup
+							toggler={
+								<Button>
+									<FontAwesomeIcon
+										icon={falUserCircle}
+									/>
+									User
+								</Button>
+							}
+							navItems={[
+								{
+									type: "item",
+									label: "Item 1",
+									onClick: () => {
+										console.log("ITEM 1")
+									},
+								},
+								{
+									type: "item",
+									label: "Item 2",
+									url: "Item 1",
+								},
+								{
+									type: "divider",
+								},
+								{
+									type: "item",
+									label: "Item 3",
+									url: "Item 1",
+								},
+							]}
+						/>
 					</div>
 				</ContentWrapper>
 			</Wrapper>

@@ -1,0 +1,26 @@
+import styled, { StyledComponent } from "styled-components"
+
+export const Wrapper
+	: StyledComponent<"div", any, {}, never>
+	= styled.div`
+
+		padding: calc(6px + .6vw) calc(8px + .8vw);
+		transition: .2s all;
+		cursor: pointer;
+		border-radius: 8px;
+
+		svg {
+			&:first-child {
+				margin-right: calc(3px + .2vw);
+			}
+			&:last-child {
+				margin-left: calc(3px + .2vw);
+			}
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: #FFFFFF22;
+		}
+
+	`

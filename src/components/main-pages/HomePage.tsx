@@ -1,3 +1,4 @@
+import { Text } from "is-react-style"
 import useReduxAuth from "@helpers/hooks/redux-auth"
 import { updateAuth } from "@storages/auth/action"
 import React, { useEffect } from "react"
@@ -34,6 +35,8 @@ export const HomePage
 
 		return (
 			<Wrapper>
+				{/* <Button /> */}
+				<Text />
 				{authState.name}
 			</Wrapper>
 		)
