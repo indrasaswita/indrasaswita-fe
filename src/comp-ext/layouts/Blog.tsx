@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import Label from "comp-ext/atoms/Label"
 import React, { ReactNode } from "react"
 import { Wrapper } from "./Blog.style"
 
 export interface BlogProps {
+	image?: string,
 	title?: string,
 	subtitle?: string,
 	titlePostActions?: ReactNode[],
@@ -16,6 +18,15 @@ export const Blog
 		return (
 			<Wrapper>
 				<div className="blog-content">
+
+					{props.image && (
+						<div className="cover-wrapper">
+							<img
+								srcSet={props.image}
+								alt={props.title}
+							/>
+						</div>
+					)}
 
 					{props.title && (
 						<div className="title-wrapper">

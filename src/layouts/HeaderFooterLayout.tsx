@@ -16,16 +16,16 @@ export const HeaderFooterLayout
 					<HeaderV1
 						menus={[
 							{
-								label: "Test 1",
-								url: "#",
+								label: "Home",
+								url: "/",
 							},
 							{
-								label: "Test 2",
-								url: "#",
+								label: "Article",
+								url: "/blog",
 							},
 							{
-								label: "Test 3",
-								url: "#",
+								label: "About Me",
+								url: "/aboutme",
 							},
 						]}
 					/>

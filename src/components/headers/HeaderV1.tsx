@@ -1,14 +1,19 @@
 import DropdownPopup from "comp-ext/organisms/DropdownPopup"
 import {
 	faMapLocationDot as fadMapLocationDot,
+	faPhoneCircleAlt,
 } from "@fortawesome/pro-duotone-svg-icons"
-import {
-	faUserCircle as falUserCircle,
-} from "@fortawesome/pro-light-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ContentWrapper from "layouts/ContentWrapper"
 import React from "react"
 import { Wrapper } from "./HeaderV1.style"
+import {
+	faWhatsapp as fabWhatsapp,
+} from "@fortawesome/free-brands-svg-icons"
+import {
+	faEnvelopeBadge as falEnvelopeBadge,
+	faMobileAndroid as falMobileAndroid,
+} from "@fortawesome/pro-light-svg-icons"
 
 export type HeaderNavItem = {
 	label: string,
@@ -66,31 +71,55 @@ export const HeaderV1
 							toggler={(
 								<>
 									<FontAwesomeIcon
-										icon={falUserCircle}
+										icon={faPhoneCircleAlt}
+										flip="horizontal"
 									/>&nbsp;
-									User
+									Contact
 								</>
 							)}
 							navItems={[
 								{
 									type: "item",
-									label: "Item 1",
-									onClick: () => {
-										console.log("ITEM 1")
-									},
+									label: (
+										<>
+											<FontAwesomeIcon
+												icon={fabWhatsapp}
+												fixedWidth
+											/>&nbsp;
+											Whatsapp
+										</>
+									),
+									url: "https://wa.me/6281315519889",
+									target: "_blank",
 								},
 								{
 									type: "item",
-									label: "Item 2",
-									url: "Item 1",
+									label: (
+										<>
+											<FontAwesomeIcon
+												icon={falEnvelopeBadge}
+												fixedWidth
+											/>&nbsp;
+											Email
+										</>
+									),
+									url: "mailto:indrasaswita@gmail.com",
 								},
 								{
 									type: "divider",
 								},
 								{
 									type: "item",
-									label: "Item 3",
-									url: "Item 1",
+									label: (
+										<>
+											<FontAwesomeIcon
+												icon={falMobileAndroid}
+												fixedWidth
+											/>&nbsp;
+											Phone
+										</>
+									),
+									url: "tel:6281315519889",
 								},
 							]}
 						/>

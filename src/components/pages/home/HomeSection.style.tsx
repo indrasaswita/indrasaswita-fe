@@ -36,13 +36,6 @@ export const Wrapper
 			>.section-main-wrapper {
 	
 				.section {
-					&-category-wrapper {
-						margin: 0 calc(-2px - .2vw);
-	
-						> * {
-							margin: calc(2px + .2vw);
-						}
-					}
 	
 					&-content-wrapper {
 						padding: calc(5px + .5vw) 0;

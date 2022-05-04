@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 export enum EnumFileType {
-	JS="jsx",
+	JS="js",
 	TXT="txt",
 	JSX="jsx",
 	TS="ts",

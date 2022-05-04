@@ -9,6 +9,7 @@ export interface BadgeProps {
   content: string,
   color?: string,
   backgroundColor?: string,
+	padding?: string,
   fontSize?: string,
 	fontWeight?: string | number,
 	showClose?: boolean,
@@ -20,6 +21,7 @@ export const Badge: React.FunctionComponent<BadgeProps> = (props: BadgeProps) =>
 	return (
 		<Wrapper
 			color={props.color}
+			padding={props.padding}
 			backgroundColor={props.backgroundColor}
 			fontSize={props.fontSize}
 			fontWeight={props.fontWeight}

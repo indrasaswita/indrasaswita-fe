@@ -45,17 +45,19 @@ export const CodeBlock
 				}>
 					{props.children}
 				</Highlighter>
-				<div
-					className="copy-clipboard-wrapper"
-					onClick={() => {
-						copyCode()
-					}}
-				>
-					<FontAwesomeIcon
-						icon={fasClipboard}
-						fixedWidth
-					/>
-				</div>
+				{props.showCopy && (
+					<div
+						className="copy-clipboard-wrapper"
+						onClick={() => {
+							copyCode()
+						}}
+					>
+						<FontAwesomeIcon
+							icon={fasClipboard}
+							fixedWidth
+						/>
+					</div>
+				)}
 			</Wrapper>
 		)
 	}

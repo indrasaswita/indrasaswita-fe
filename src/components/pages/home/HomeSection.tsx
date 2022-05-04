@@ -1,5 +1,6 @@
 import Badge from "@is-style/atoms/Badge"
 import Label from "@is-style/atoms/Label"
+import BadgeList from "@is-style/molecules/BadgeList"
 import ContentWrapper from "@layouts/ContentWrapper"
 import React, { ReactNode } from "react"
 import { Wrapper } from "./HomeSection.style"
@@ -40,7 +41,7 @@ export const HomeSection
 						/>
 					)}
 					<div className="section-main-wrapper">
-						<div className="section-category-wrapper">
+						<BadgeList>
 							{props.categories
 								&& props
 									.categories
@@ -54,7 +55,7 @@ export const HomeSection
 											/>
 										)
 									})}
-						</div>
+						</BadgeList>
 
 						<Label
 							type="title section"

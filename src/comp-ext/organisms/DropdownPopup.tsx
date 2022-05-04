@@ -18,7 +18,13 @@ const DropdownPopup
 		const [show, setShow] = useState<boolean>(false)
 
 		return (
-			<Wrapper>
+			<Wrapper
+				onBlur={() => {
+					setTimeout(() => {
+						setShow(false)
+					}, 100)
+				}}
+			>
 				<Button
 					type={EnumButtonType.Transp}
 					padding={props.togglerPadding}

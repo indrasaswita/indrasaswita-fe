@@ -9,11 +9,11 @@ export const Wrapper
 			flex-direction: row;
 
 			.blog-content {
-				width: 100%;
+				width: calc(8/12*100%);
 			}
 
 			.sidebar-wrapper {
-				width: 50%;
+				width: calc(4/12*100%);
 			}
 		}
 
@@ -30,6 +30,13 @@ export const Wrapper
 		
 		.blog-content {
 			line-height: 1.5;
+
+			.cover-wrapper {
+				display: block;
+				img {
+					width: 100%;
+				}
+			}
 
 			.title-wrapper {
 				margin-bottom: calc(15px + 1.5vw);

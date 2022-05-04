@@ -53,6 +53,8 @@ export const Wrapper
 					opacity: .9;
 					margin-bottom: 10px;
 					font-size: 110%;
+					display: flex;
+					align-items: center;
 				}
 
 				&:after {

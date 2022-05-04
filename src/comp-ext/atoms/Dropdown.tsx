@@ -48,6 +48,7 @@ export const Dropdown
 											key={index}
 											className="item"
 											href={item.url}
+											target={item.target}
 										>
 											{item.label}
 										</a>

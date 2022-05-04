@@ -1,6 +1,9 @@
 import Badge from "@is-style/atoms/Badge"
 import Label from "@is-style/atoms/Label"
+import BadgeList from "@is-style/molecules/BadgeList"
 import ContentWrapper from "@layouts/ContentWrapper"
+import Color from "@styles/themes/default/variable.mixin"
+import { darken } from "polished"
 import React from "react"
 import { connect } from "react-redux"
 import { Wrapper } from "./AboutMePage.style"
@@ -21,14 +24,21 @@ export const AboutMePage
 			<ContentWrapper>
 				<Wrapper>
 
-					<Badge
-						content="MILESTONE"
-						fontWeight={700}
-						letterSpacing="1px"
-					/>
+					<BadgeList>
+						<Badge
+							content="ABOUT"
+							fontWeight={700}
+							letterSpacing="1px"
+						/>
+						<Badge
+							content="MILESTONE"
+							fontWeight={700}
+							letterSpacing="1px"
+						/>
+					</BadgeList>
 					<Label
 						type="title section"
-						subChildren={"Here is my experience"}
+						subChildren={"Want to get better every day, so I'm still learning beyond yesterday"}
 					>
 						MY EXPERIENCE
 					</Label>
@@ -37,7 +47,15 @@ export const AboutMePage
 						<li className="list">
 							<div className="data-date"> 2021-now </div>
 							<div className="type"> Rumah123 (99 Group) - Fulltime </div>
-							<div className="title"> FULLSTACK ENGINEER </div>
+							<div className="title">
+								FULLSTACK ENGINEER&nbsp;&nbsp;
+								<Badge
+									content="current"
+									fontWeight={700}
+									backgroundColor={darken(.2, Color.info)}
+									padding="calc(2px + .2vw) calc(4px + .4vw)"
+								/>
+							</div>
 							<div className="text">
 								Create and maintain the system for Agent Business Team. <br />
 								Create documentation for frontend development. <br />
@@ -55,10 +73,32 @@ export const AboutMePage
 						</li>
 
 						<li className="list">
+							<div className="data-date"> 2021-now </div>
+							<div className="type"> Anak Panah Cyberschool - FREELANCE </div>
+							<div className="title">
+								EXTRACURRICULAR TEACHER&nbsp;&nbsp;
+								<Badge
+									content="current"
+									fontWeight={700}
+									backgroundColor={darken(.2, Color.info)}
+									padding="calc(2px + .2vw) calc(4px + .4vw)"
+								/>
+							</div>
+							<div className="text">
+								Help the student understand how the code works. <br />
+								Create presentation and teach in a class.  <br /><br />
+
+								2021: Teach for desktop drag-drop project, by using VB.NET Desktop. <br />
+								2020: Teach for algo and basic of programming, by using GoLang.
+							</div>
+						</li>
+
+						<li className="list">
 							<div className="data-date"> 2021-2021 </div>
 							<div className="type"> SKYBRIDGE - FULLTIME </div>
 							<div className="title"> SENIOR DEVELOPER </div>
 							<div className="text">
+								Lead for a small team of developers. <br />
 								Manage &amp; maintain server. <br />
 								Delegating work &amp; assignment to team members, via Jira & Miro. <br />
 								Creating goals, with the director and product team. <br />
@@ -76,13 +116,13 @@ export const AboutMePage
 						<li className="list">
 							<div className="data-date"> 2020-2021 </div>
 							<div className="type"> SKYBRIDGE - FULLTIME </div>
-							<div className="title"> SENIOR DEVELOPER </div>
+							<div className="title"> SENIOR BACKEND DEVELOPER </div>
 							<div className="text">
 								Work in a company which provides for the various needs of the church. <br />
 								Maintain projects&apos; package versions. <br />
 								Learn to lead a small programming team. <br />
 								Creating database diagrams based on business process. <br /> <br />
-								2021: Learn &amp; implement Whatsapp (non-business account) Robot with Python-Selenium-Pusher(ws).
+								2021: Learn &amp; implement Whatsapp (non-business account) Robot with Python-Selenium-Pusher (socket). <br />
 								2021: Learn &amp; implement websocket programming (Pusher.js) for chatroll system. <br />
 								2020: Upgrade several programs to Angular CLI and maintain SEO. <br />
 								2020: Learn &amp; implement Midtrans for payment process. <br />
@@ -113,7 +153,7 @@ export const AboutMePage
 								2018: Do reasearch and implementation on SEO and Google Analytics. <br />
 								2017: Make online calculations, shopping carts, and transactions for online sales. <br />
 								2016: Develop JAKARTABROSUR website for sell printing online. <br />
-								2015:Creating printer integration with socketprogramming on C#.NET Desktop. <br />
+								2015: Creating printer integration with socketprogramming on C#.NET Desktop. <br />
 								2014: Creating a simple desktop POS system using C#.NET, VB.NET and Crystal Report.
 							</div>
 						</li>
