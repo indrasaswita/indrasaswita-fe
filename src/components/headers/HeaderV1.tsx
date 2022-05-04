@@ -1,4 +1,3 @@
-import Button from "@components/atoms/Button"
 import DropdownPopup from "@components/organisms/DropdownPopup"
 import {
 	faMapLocationDot as fadMapLocationDot,
@@ -65,14 +64,14 @@ export const HeaderV1
 								})}
 						</ul>
 						<DropdownPopup
-							toggler={
-								<Button>
+							toggler={(
+								<>
 									<FontAwesomeIcon
 										icon={falUserCircle}
 									/>
 									User
-								</Button>
-							}
+								</>
+							)}
 							navItems={[
 								{
 									type: "item",

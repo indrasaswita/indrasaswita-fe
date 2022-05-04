@@ -1,20 +1,31 @@
+import Button from "@components/atoms/Button"
 import Dropdown from "@components/atoms/Dropdown"
 import { NavItem } from "@components/atoms/nav-item.interface"
-import React, { ReactNode } from "react"
+import React, { ReactNode, useState } from "react"
 import { Wrapper } from "./DropdownPopup.style"
 
-export interface DropdownPopupProps {
-	toggler: ReactNode,
+interface DropdownPopupProps {
+	toggler: ReactNode | ReactNode[],
 	navItems: NavItem[],
 }
 
-export const DropdownPopup
+const DropdownPopup
 	: React.FunctionComponent<DropdownPopupProps>
 	= (props: DropdownPopupProps) => {
+
+		const [show, setShow] = useState<boolean>(false)
+
 		return (
 			<Wrapper>
-				{props.toggler}
+				<Button
+					onClick={() => {
+						setShow(!show)
+					}}
+				>
+					{props.toggler}
+				</Button>
 				<Dropdown
+					show={show}
 					data={props.navItems}
 				/>
 			</Wrapper>

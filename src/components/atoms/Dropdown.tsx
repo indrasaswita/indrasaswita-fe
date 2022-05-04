@@ -4,6 +4,7 @@ import { NavItem } from "./nav-item.interface"
 
 export interface DropdownProps {
 	data: NavItem[],
+	show?: boolean,
 }
 
 export const Dropdown
@@ -11,7 +12,9 @@ export const Dropdown
 	= (props: DropdownProps) => {
 
 		return (
-			<Wrapper>
+			<Wrapper
+				show={props.show}
+			>
 				<div className="dropdown-list">
 					{props
 						.data
@@ -52,7 +55,7 @@ export const Dropdown
 
 								item.type === "divider"
 									&& (
-										<hr />
+										<hr key={index} />
 									),
 							]
 

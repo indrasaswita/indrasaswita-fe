@@ -1,13 +1,18 @@
+import Color from "@styles/themes/default/variable.mixin"
 import styled, { StyledComponent } from "styled-components"
 
 export const Wrapper
-	: StyledComponent<"div", any, {}, never>
-	= styled.div`
+	: StyledComponent<"button", any, {}, never>
+	= styled.button`
 
 		padding: calc(6px + .6vw) calc(8px + .8vw);
 		transition: .2s all;
 		cursor: pointer;
 		border-radius: 8px;
+		display: block;
+		border: 0;
+		background-color: ${Color.primary};
+		color: white;
 
 		svg {
 			&:first-child {

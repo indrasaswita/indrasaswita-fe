@@ -1,10 +1,19 @@
 import styled, { StyledComponent } from "styled-components"
 
+interface WrapperProps {
+	readonly show?: boolean,
+}
+
 export const Wrapper
-	: StyledComponent<"div", any, {}, never>
-	= styled.div`
+	: StyledComponent<"div", any, WrapperProps, never>
+	= styled.div<WrapperProps>`
+
+		${(p: WrapperProps) => !p.show ? `
+			display: none;
+		` : ""}
 
 		position: absolute;
+		z-index: 1002;
 		margin-top: 5px;
 		left: auto;
 		right: 0;
