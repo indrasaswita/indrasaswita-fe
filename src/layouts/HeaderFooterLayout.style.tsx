@@ -16,6 +16,7 @@ export const Wrapper
 			border-bottom: 1px solid rgba(0,0,0,.1);
 			background-color: ${Color.primary};
 			color: white;
+			line-height: 1;
 		}
 
 		> .content-wrapper {
@@ -26,6 +27,7 @@ export const Wrapper
 			height: 200px;
 			border-top: 1px solid rgba(0,0,0,.1);
 			background-color: rgba(0,0,0,.1);
+			line-height: 1;
 		}
 
 	`

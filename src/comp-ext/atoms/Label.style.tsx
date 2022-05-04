@@ -4,7 +4,7 @@ export const Wrapper
 	: StyledComponent<"div", any, {}, never>
 	= styled.div`
 
-		&.label {
+		> .label {
 
 
 			&.title {
@@ -27,6 +27,20 @@ export const Wrapper
 					font-size: 120%;
 				}
 
+				&.section {
+					font-size: 160%;
+					font-weight: 500;
+				}
+
+			}
+
+		}
+
+		> .sublabel {
+
+			&.section {
+				color: #0007;
+				font-weight: 700;
 			}
 
 		}

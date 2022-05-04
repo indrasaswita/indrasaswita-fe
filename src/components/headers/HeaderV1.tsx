@@ -1,4 +1,4 @@
-import DropdownPopup from "@components/organisms/DropdownPopup"
+import DropdownPopup from "comp-ext/organisms/DropdownPopup"
 import {
 	faMapLocationDot as fadMapLocationDot,
 } from "@fortawesome/pro-duotone-svg-icons"
@@ -6,9 +6,7 @@ import {
 	faUserCircle as falUserCircle,
 } from "@fortawesome/pro-light-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Color from "@styles/themes/default/variable.mixin"
 import ContentWrapper from "layouts/ContentWrapper"
-import { lighten } from "polished"
 import React from "react"
 import { Wrapper } from "./HeaderV1.style"
 
@@ -27,10 +25,10 @@ export const HeaderV1
 	= (props: HeaderV1Props) => {
 		return (
 			<Wrapper>
-				<ContentWrapper
-					backgroundColor={lighten(.15, Color.primary)}
-				>
-					<div className="very-top-info">
+				<div className="very-top-wrapper">
+					<ContentWrapper
+						className="very-top-info"
+					>
 						<div className="info-text">
 							This site is currently under construction
 						</div>
@@ -41,8 +39,8 @@ export const HeaderV1
 							/>
 							Jakarta, Indonesia
 						</div>
-					</div>
-				</ContentWrapper>
+					</ContentWrapper>
+				</div>
 				<ContentWrapper>
 					<div className="nav-wrapper">
 						<ul className="navs">
@@ -64,11 +62,12 @@ export const HeaderV1
 								})}
 						</ul>
 						<DropdownPopup
+							togglerPadding="calc(4px + .4vw) calc(8px + .8vw)"
 							toggler={(
 								<>
 									<FontAwesomeIcon
 										icon={falUserCircle}
-									/>
+									/>&nbsp;
 									User
 								</>
 							)}

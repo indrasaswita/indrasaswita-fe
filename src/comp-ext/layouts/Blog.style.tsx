@@ -1,22 +1,37 @@
+import { device } from "@styles/mixins/media-width.mixin"
 import styled, { StyledComponent } from "styled-components"
 
 export const Wrapper
 	: StyledComponent<"div", any, {}, never>
 	= styled.div`
 
+		@media ${device.tabletLUp} {
+			flex-direction: row;
+
+			.blog-content {
+				width: 100%;
+			}
+
+			.sidebar-wrapper {
+				width: 50%;
+			}
+		}
+
+		@media ${device.tabletPDown} {
+			flex-direction: column;
+		}
+
 		font-size: 110%;
-		padding: calc(20px + 2vw);
+		padding: calc(20px + 2vw) 0;
 
 		display: flex;
 		gap: calc(10px + 1vw);
 		flex-direction: row;
 		
 		.blog-content {
-			width: 80%;
 			line-height: 1.5;
 
 			.title-wrapper {
-				margin-top: calc(6px + .6vw);
 				margin-bottom: calc(15px + 1.5vw);
 
 				.post-title {
@@ -30,7 +45,7 @@ export const Wrapper
 		}
 
 		.sidebar-wrapper {
-			width: 40%;
+			max-width: calc(220px + 3vw);
 		}
 
 	`

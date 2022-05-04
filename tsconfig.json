@@ -21,6 +21,12 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@is-style/*": [
+        "./comp-ext/*"
+      ],
       "@components/*": [
         "./components/*"
       ],
@@ -29,6 +35,9 @@
       ],
       "@helpers/*": [
         "./helpers/*"
+      ],
+      "@layouts/*": [
+        "./layouts/*"
       ],
       "@pages/*": [
         "./pages/*"

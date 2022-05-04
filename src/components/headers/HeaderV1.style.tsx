@@ -1,3 +1,5 @@
+import Color from "@styles/themes/default/variable.mixin"
+import { lighten } from "polished"
 import styled, { StyledComponent } from "styled-components"
 
 export const Wrapper
@@ -8,16 +10,19 @@ export const Wrapper
 			padding: calc(4px + .4vw) 0;
 		}
 
-		.very-top-info {
-			display: flex;
+		.very-top-wrapper {
+			background-color: ${lighten(.15, Color.primary)};
+			.very-top-info {
+				display: flex;
 
-			.info-text {
-				flex: 1;
-			}
+				.info-text {
+					flex: 1;
+				}
 
-			.location {
-				svg {
-					margin-right: calc(3px + .2vw);
+				.location {
+					svg {
+						margin-right: calc(3px + .2vw);
+					}
 				}
 			}
 		}
@@ -35,14 +40,14 @@ export const Wrapper
 					list-style: none;
 					padding: 0 calc(4px + .4vw);
 					a {
-						padding: calc(6px + .6vw) calc(8px + .8vw);
+						padding: calc(4px + .4vw) calc(8px + .8vw);
 						display: block;
 						border-radius: 8px;
 						transition: .2s all;
 
 						&:hover {
 							text-decoration: none;
-							background-color: #FFFFFF22;
+							background-color: rgba(0,0,0,.1);
 						}
 					}
 

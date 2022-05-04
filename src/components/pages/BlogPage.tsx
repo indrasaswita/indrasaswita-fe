@@ -1,20 +1,20 @@
-import CodeBlock from "@components/atoms/CodeBlock"
-import Paragraph from "@components/atoms/Paragraph"
-import Blog from "@components/layouts/Blog"
-import useReduxAuth from "@helpers/hooks/redux-auth"
 import { EnumFileType } from "@helpers/types/file-type"
-import { updateAuth } from "@storages/auth/action"
-import ContentWrapper from "layouts/ContentWrapper"
-import React, { useEffect } from "react"
+import ContentWrapper from "@layouts/ContentWrapper"
+import CodeBlock from "comp-ext/atoms/CodeBlock"
+import Paragraph from "comp-ext/atoms/Paragraph"
+import Blog from "comp-ext/layouts/Blog"
+import SidebarCardGroup from "comp-ext/layouts/sidebar/SidebarCardGroup"
+import SidebarCard from "comp-ext/molecules/SidebarCard"
+import React from "react"
 import { connect } from "react-redux"
-import { Wrapper } from "./HomePage.style"
+import { Wrapper } from "./BlogPage.style"
 
-interface HomePageProps {
-
+interface BlogPageProps {
+	slug: string,
 }
 
 interface DispatchProps {
-	updateAuth: typeof updateAuth,
+
 }
 
 const code: string = `function a (b: string): string {
@@ -30,29 +30,15 @@ const code: string = `function a (b: string): string {
 }
 `
 
-export type Props = HomePageProps & DispatchProps
-export const HomePage
+export type Props = BlogPageProps & DispatchProps
+export const BlogPage
 	: React.FunctionComponent<Props>
 	= (props: Props) => {
-
-		const {
-			authState,
-		} = useReduxAuth()
-
-		useEffect(() => {
-			props.updateAuth({
-				...authState,
-				id: 1,
-				firstName: "John",
-				lastName: "Doe",
-				name: "John Doe",
-			})
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-		}, [])
-
 		return (
 			<Wrapper>
 				<ContentWrapper>
+					{props.slug}
+
 					<Blog
 						title="Do you have a dog?"
 						subtitle="Dog is important!"
@@ -60,6 +46,19 @@ export const HomePage
 							<span key={0}>Hello</span>,
 							<span key={1}>Hello</span>,
 						]}
+						sidebar={(
+							<SidebarCardGroup>
+								<SidebarCard
+									title="Hello"
+									subtitle="Subtitle"
+								>
+									Testing Hello WOrld
+								</SidebarCard>
+								<SidebarCard>
+									Testing Hello WOrld
+								</SidebarCard>
+							</SidebarCardGroup>
+						)}
 					>
 						<Paragraph
 							type="blog"
@@ -85,5 +84,5 @@ export const HomePage
 	}
 
 export default connect(null, {
-	updateAuth,
-})(HomePage)
+
+})(BlogPage)

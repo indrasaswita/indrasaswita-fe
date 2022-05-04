@@ -1,16 +1,16 @@
-import HomePage from "@components/pages/HomePage"
+import AboutMePage from "@components/pages/AboutMePage"
 import { FC } from "react"
 import HeaderFooterLayout from "@layouts/HeaderFooterLayout"
 
-const Home
+const AboutMe
 : FC
 = () => {
 
 	return (
 		<HeaderFooterLayout>
-			<HomePage />
+			<AboutMePage />
 		</HeaderFooterLayout>
 	)
 }
 
-export default Home
+export default AboutMe

@@ -1,4 +1,4 @@
-import Label from "@components/atoms/Label"
+import Label from "comp-ext/atoms/Label"
 import React, { ReactNode } from "react"
 import { Wrapper } from "./Blog.style"
 
@@ -7,6 +7,7 @@ export interface BlogProps {
 	subtitle?: string,
 	titlePostActions?: ReactNode[],
 	children?: ReactNode,
+	sidebar?: ReactNode,
 }
 
 export const Blog
@@ -48,9 +49,11 @@ export const Blog
 
 					{props.children}
 				</div>
-				<div className="sidebar-wrapper">
-					SIDEBAR
-				</div>
+				{props.sidebar && (
+					<div className="sidebar-wrapper">
+						{props.sidebar}
+					</div>
+				)}
 			</Wrapper>
 		)
 	}

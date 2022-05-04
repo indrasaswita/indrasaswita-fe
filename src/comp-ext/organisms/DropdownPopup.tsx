@@ -1,11 +1,13 @@
-import Button from "@components/atoms/Button"
-import Dropdown from "@components/atoms/Dropdown"
-import { NavItem } from "@components/atoms/nav-item.interface"
+import { EnumButtonType } from "@is-style/atoms/Button.type"
+import Button from "comp-ext/atoms/Button"
+import Dropdown from "comp-ext/atoms/Dropdown"
+import { NavItem } from "comp-ext/atoms/nav-item.interface"
 import React, { ReactNode, useState } from "react"
 import { Wrapper } from "./DropdownPopup.style"
 
 interface DropdownPopupProps {
 	toggler: ReactNode | ReactNode[],
+	togglerPadding?: string,
 	navItems: NavItem[],
 }
 
@@ -18,6 +20,8 @@ const DropdownPopup
 		return (
 			<Wrapper>
 				<Button
+					type={EnumButtonType.Transp}
+					padding={props.togglerPadding}
 					onClick={() => {
 						setShow(!show)
 					}}

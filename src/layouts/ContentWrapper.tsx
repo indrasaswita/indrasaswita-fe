@@ -2,8 +2,8 @@ import React, { ReactNode } from "react"
 import { Wrapper } from "./ContentWrapper.style"
 
 export interface ContentWrapperProps {
-	backgroundColor?: string,
 	children?: ReactNode | ReactNode[],
+	className?: string,
 }
 
 export const ContentWrapper
@@ -11,11 +11,9 @@ export const ContentWrapper
 	= (props: ContentWrapperProps) => {
 		return (
 			<Wrapper
-				backgroundColor={props.backgroundColor}
+				className={props.className}
 			>
-				<div className="content">
-					{props.children}
-				</div>
+				{props.children}
 			</Wrapper>
 		)
 	}
