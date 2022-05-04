@@ -1,5 +1,5 @@
 # NextJS (FE) for IndraSaswita.com
-Is a monorepo to provide frontend environment for <a href='indrasaswita.com' target='_blank'>indrasaswita.com</a>. It is just a simple portfolio site of mine. I hope you like it too!
+Is a monorepo to provide frontend environment for <a href='https://www.indrasaswita.com' target='_blank'>indrasaswita.com</a>. It is just a simple portfolio site of mine. I hope you like it too!
 
 ## Stacks
 There are stacks that I used here:
