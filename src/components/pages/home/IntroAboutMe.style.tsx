@@ -1,3 +1,4 @@
+import { device } from "@styles/mixins/media-width.mixin"
 import Color from "@styles/themes/default/variable.mixin"
 import { darken } from "polished"
 import styled, { StyledComponent } from "styled-components"
@@ -9,10 +10,22 @@ export const Wrapper
 	: StyledComponent<"div", any, {}, never>
 	= styled.div`
 
-		background-image: url('https://indrasaswita.com/assets/images/cover-is.png');
-		background-position: top center;
-		background-size: cover;
-		background-color: #E3E3E3;
+		@media ${device.tabletPDown} {
+			background: linear-gradient(180deg, #EFEFEF, #EFEFEF 50%, #CCC);
+
+			.intro-text {
+				min-width: 80vw;
+			}
+		}
+
+		@media ${device.tabletLUp} {
+			background-image: url('https://indrasaswita.com/assets/images/cover-is.png');
+			background-position: top center;
+			background-size: cover;
+			background-color: #E3E3E3;
+		}
+
+		
 		
 		padding: calc(40px + 3vw) 0;
 

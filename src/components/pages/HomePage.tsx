@@ -1,11 +1,14 @@
+import { screenSize } from "@config/screen-breakpoint"
 import useReduxAuth from "@helpers/hooks/redux-auth"
+import { useWindowSize, WindowSize } from "@helpers/hooks/window-size"
 import Button from "@is-style/atoms/Button"
 import { EnumButtonType } from "@is-style/atoms/Button.type"
 import Divider from "@is-style/atoms/Divider"
 import { updateAuth } from "@storages/auth/action"
 import Color from "@styles/themes/default/variable.mixin"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { connect } from "react-redux"
+import BlogList from "./blog-index/BlogList"
 import HomeSection from "./home/HomeSection"
 import IntroAboutMe from "./home/IntroAboutMe"
 import { Wrapper } from "./HomePage.style"
@@ -23,6 +26,10 @@ export const HomePage
 	: React.FunctionComponent<Props>
 	= (props: Props) => {
 
+		const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false)
+
+		const windowSize: WindowSize = useWindowSize()
+
 		const {
 			authState,
 		} = useReduxAuth()
@@ -38,26 +45,27 @@ export const HomePage
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		}, [])
 
+		useEffect(() => {
+			if (windowSize.width < screenSize.tabletL) {
+				setIsSmallScreen(true)
+			} else {
+				setIsSmallScreen(false)
+			}
+		}, [windowSize.width])
+
 		return (
 			<Wrapper>
 				<IntroAboutMe />
 
-				<HomeSection
-					categories={["articles"]}
-					title={"That I want to share to you"}
-					subtitle="Let's learn together"
-				>
-
-					<p>
-						Learn and teach are almost the same, cause when you teach someone you need to learn. The more I teach, the more I will get. And gives its own satisfaction when you can understand and use it in your life.
-					</p>
-				</HomeSection>
+				<BlogList
+					isHomeSection
+				/>
 
 				<HomeSection
 					categories={["About"]}
 					title={"About Me"}
 					backgroundColor="#EEE"
-					headlineUrl={"https://indrasaswita.com/assets/images/home-aboutme.png"}
+					headlineUrl={isSmallScreen ? null : "https://indrasaswita.com/assets/images/home-aboutme.png"}
 				>
 					<Divider
 						text="Full Stack Engineer"

@@ -117,7 +117,7 @@ export const Wrapper
 			font-weight: inherit;
 			
 			&.link {
-				display: block;
+				display: inline-block;
 				text-align: center;
 			}
 			&.btn-white {

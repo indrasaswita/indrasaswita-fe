@@ -24,10 +24,35 @@ export const Wrapper
 		}
 
 		> .footer-wrapper {
-			height: 200px;
 			border-top: 1px solid rgba(0,0,0,.1);
 			background-color: rgba(0,0,0,.1);
 			line-height: 1;
+
+			.footer {
+				padding: calc(10px + 1vw) 0;
+
+				display: flex;
+				align-items: center;
+
+				.center {
+					flex: 1;
+					text-align: center;
+				}
+
+				.right {
+					text-align: right;
+					display: flex;
+					gap: calc(4px + .4vw);
+					font-size: 150%;
+
+					a {
+						transition: .2s color;
+						&:hover {
+							color: ${Color.primary};
+						}
+					}
+				}
+			}
 		}
 
 	`
