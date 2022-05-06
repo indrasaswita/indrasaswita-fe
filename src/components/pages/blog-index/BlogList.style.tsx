@@ -98,7 +98,7 @@ export const Wrapper
 				}
 
 				.title {
-					font-weight: 400;
+					font-weight: 500;
 					font-size: 105%;
 					margin: calc(2px + .2vw) calc(4px + .4vw);
 					color: ${Color.primary};
@@ -112,7 +112,7 @@ export const Wrapper
 
 				.subtitle {
 					font-weight: 500;
-					font-size: 90%;
+					font-size: 87%;
 					opacity: .6;
 					margin: 0 calc(4px + .4vw);
 

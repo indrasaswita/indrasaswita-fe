@@ -6,7 +6,7 @@
     "dev": "next dev -p 3007",
     "devkill": "kill -l $(fuser 3007/tcp) && next dev -p 3007",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
-    "@types/react": "^18.0.3",
+    "@types/react": "^18.0.8",
     "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "eslint": "^8.13.0",

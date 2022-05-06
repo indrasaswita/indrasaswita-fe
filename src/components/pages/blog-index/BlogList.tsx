@@ -37,7 +37,12 @@ export const BlogList
 
 							for(var k in blogData) {
 								result.push(
-									<a className="list">
+									<a
+										className="list"
+										href={`/blog/${k}`}
+										target="_self"
+										rel="noreferrer"
+									>
 										<div
 											className="cover"
 											style={{

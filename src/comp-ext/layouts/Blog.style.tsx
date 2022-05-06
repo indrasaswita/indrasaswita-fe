@@ -8,13 +8,13 @@ export const Wrapper
 		@media ${device.tabletLUp} {
 			flex-direction: row;
 
-			.blog-content {
-				width: calc(8/12*100%);
-			}
+			// .blog-content {
+			// 	width: calc(8/12*100%);
+			// }
 
-			.sidebar-wrapper {
-				width: calc(4/12*100%);
-			}
+			// .sidebar-wrapper {
+			// 	width: calc(4/12*100%);
+			// }
 		}
 
 		@media ${device.tabletPDown} {
@@ -53,6 +53,7 @@ export const Wrapper
 
 		.sidebar-wrapper {
 			max-width: calc(220px + 3vw);
+			display: none;
 		}
 
 	`

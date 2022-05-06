@@ -17,6 +17,7 @@ export type Props = BlogPageProps & DispatchProps
 export const BlogPage
 	: React.FunctionComponent<Props>
 	= (props: Props) => {
+
 		return (
 			<Wrapper>
 				<ContentWrapper>

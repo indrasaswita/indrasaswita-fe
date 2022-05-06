@@ -40,7 +40,13 @@ export const getServerSideProps
 		}
 
 		return {
-			props: {},
+			props: {
+				head: {
+					title: blogData[slug]?.title || "Indra Saswita",
+					description: blogData[slug]?.subtitle || "",
+					meta: [],
+				},
+			},
 		}
 	}
 

@@ -1,31 +1,45 @@
 import { EnumFileType } from "@helpers/types/file-type"
 import CodeBlock from "@is-style/atoms/CodeBlock"
+import Divider from "@is-style/atoms/Divider"
 import Paragraph from "@is-style/atoms/Paragraph"
 import SidebarCardGroup from "@is-style/layouts/sidebar/SidebarCardGroup"
 import SidebarCard from "@is-style/molecules/SidebarCard"
+import Color from "@styles/themes/default/variable.mixin"
 import { BlogData } from "../blog.data"
 
-const code: string = `function a (b: string): string {
-  var a = 'hellow'
-  const j = {
-    a: 'test',
-  };
-  
-  let = ['a', 'b'];
-  
-  console.log("test");
-  // hello world
-}
+const code: string = `const [value, setValue] = useState<number>(1)
+
+useEffect(() => {
+  setValue(10) // it will be have any effect
+  setValue(value + 1) // here, the value is 1, not 10
+}, [])
+`
+
+const code2: string = `const [value, setValue] = useState<number>(1)
+
+useEffect(() => {
+  let temp: number = value
+
+  // setValue(10)
+  temp = 10
+
+  // setValue(value + 1)
+  temp = temp + 1
+
+  setValue(temp)
+}, [])
 `
 
 export const whatIsReactForMe
 	: BlogData
 	= {
+		image: "https://i.pinimg.com/originals/a6/96/6d/a6966db4a107eecb401ba0061ce58cda.png",
 		title: "What is React for me?",
 		subtitle: "React in my oppinion is awesome",
 		titlePostItems: [
-			<span key={0}>Hello</span>,
-			<span key={1}>Hello</span>,
+			<span key={0}>#react</span>,
+			<span key={1}>#javascript</span>,
+			<span key={2}>#typescript</span>,
 		],
 		sidebar: (
 			<SidebarCardGroup>
@@ -45,20 +59,41 @@ export const whatIsReactForMe
 				<Paragraph
 					type="blog"
 				>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero arcu, fermentum non enim id, aliquam lacinia mauris. Maecenas condimentum tellus ac consectetur sollicitudin. Quisque nisi diam, mollis at pellentesque non, viverra sed odio. Sed eget ultrices orci, non pellentesque arcu. Praesent cursus nunc ut lacus placerat tincidunt. Maecenas consequat sapien hendrerit, sagittis risus eleifend, tempor neque. Donec sed commodo urna. Etiam et diam ac augue cursus condimentum. Mauris iaculis cursus lobortis. Sed pulvinar odio ut urna finibus vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ullamcorper nisl sit amet arcu mollis vestibulum. Proin efficitur leo laoreet tincidunt convallis. Nam et ultricies lorem. Sed nec mattis mi. Donec vitae accumsan elit, et aliquam lectus.<br /><br />
+					As we know, there are three popular frameworks for frontend development which based on javascript and typescript. They are <b>React</b>, <b>Vue</b>, and <b>Angular</b>. Each frameworks and libraries have their own pros and cons depends on the project situation.<br /><br />
 
-					Phasellus condimentum dignissim dignissim. Pellentesque consectetur aliquam congue. Morbi et pellentesque lorem. Cras diam lacus, laoreet eget libero vitae, hendrerit dignissim velit. Duis ac lacinia dolor. Donec eu dui eget urna lobortis pulvinar et nec enim. Sed placerat ornare leo ac lacinia. Vivamus non eros ullamcorper, lacinia orci a, rhoncus tellus.<br /><br />
+					According to <a href="https://trends.builtwith.com/javascript/React" target="_blank" rel="noreferrer">BuiltWith</a>, React&apos;s popularity is double compared to Vue. At the second place there is Vue and followed by Angular on third. Then, why is React popularity higher than others?<br /><br />
 
-					Mauris porta velit enim, eu tempus elit faucibus ut. Fusce commodo orci et nunc volutpat euismod. Quisque consectetur dictum neque. Aliquam a orci sed magna feugiat cursus in eu nisi. Proin eu dapibus leo, eget mattis eros. Nulla vulputate in dui quis facilisis. Sed consequat ultrices fermentum.<br /><br />
+					On React, developers are not forced to use a specific project structures. Also React have the smallest building blocks or chunks. Plus, currently React provides hooks or functional based system since 2019. <br /><br />
 
-					Ut diam metus, euismod quis quam sit amet, viverra luctus velit. Quisque euismod, magna at ullamcorper fermentum, tortor nulla maximus purus, ac tempus magna est tincidunt odio. Proin quis pellentesque massa. Proin tempus imperdiet bibendum. Aenean blandit hendrerit lectus id pulvinar. Curabitur iaculis tortor et risus cursus, vel aliquet diam interdum. Duis ut facilisis lectus. Maecenas ut cursus quam, eu vulputate justo. Praesent auctor dolor in metus commodo aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In laoreet pharetra congue. Nulla ut posuere ligula. Aliquam pellentesque sapien ultricies, egestas purus eget, pulvinar ipsum. Fusce lacinia lacus non lectus mattis consectetur.
+					For me, React hook has a better structure than class. React hooks provides more reusable code compared to React class and Angular CLI. React (class) and Angular CLI (class) have similar style of component and lifecycle, on my oppinion both of them are less flexible, unlike the hook. On hook, we can send multiple elements in argument without maintaining its lifecycle in it. It helped me to solve number of problems when using class. <b>But</b>, never call hooks inside of any logic.
+
+					<CodeBlock
+						fileType={EnumFileType.TSX}
+					>
+						{code}
+					</CodeBlock>
+
+					The latest setValue hook will only the one that has an effect to the value. The previous hooks, will be replaced by the new one, and the value was not updated yet on the second hooks. React hooks need more tricky treats to do this. <br />
+
+					<CodeBlock
+						fileType={EnumFileType.TSX}
+					>
+						{code2}
+					</CodeBlock> <br />
+
+					<Divider
+						color={Color.primary}
+						lineColor={Color.primary}
+						lineWidth={3}
+						text="CONCLUSION"
+						lineLength={50}
+						fontWeight="600"
+					/><br />
+
+					For me React is the best choice, because it has more communities. <br />
+					How about you? What is your favourite library?
+
 				</Paragraph>
-
-				<CodeBlock
-					fileType={EnumFileType.JSX}
-				>
-					{code}
-				</CodeBlock>
 			</>
 		),
 	}
