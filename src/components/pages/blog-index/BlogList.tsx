@@ -38,6 +38,7 @@ export const BlogList
 							for(var k in blogData) {
 								result.push(
 									<a
+										key={k}
 										className="list"
 										href={`/blog/${k}`}
 										target="_self"
