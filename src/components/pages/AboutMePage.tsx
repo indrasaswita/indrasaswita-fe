@@ -27,13 +27,14 @@ export const AboutMePage
 					<BadgeList>
 						{[
 							"about",
-							"milestone"
-						].map((value: string) => 
+							"milestone",
+						].map((value: string) =>
 							<Badge
+								key={value}
 								content={value.toUpperCase()}
 								fontWeight={700}
 								letterSpacing="1px"
-							/>
+							/>,
 						)}
 					</BadgeList>
 					<Label

@@ -6,8 +6,8 @@
 	},
 	"extends": [
 		"plugin:react/recommended",
-		"next/core-web-vitals",
-		"eslint:recommended"
+		"next/core-web-vitals"
+		// "eslint:recommended"
 		// "plugin:@typescript-eslint/recommended",
 		// "plugin:@typescript-eslint/eslint-recommended"
 	],
@@ -15,7 +15,6 @@
 		"ecmaFeatures": {
 			"jsx": true
 		},
-		"ecmaVersion": 12,
 		"sourceType": "module"
 	},
 	"plugins": [
