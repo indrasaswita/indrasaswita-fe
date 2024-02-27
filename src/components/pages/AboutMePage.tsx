@@ -25,16 +25,16 @@ export const AboutMePage
 				<Wrapper>
 
 					<BadgeList>
-						<Badge
-							content="ABOUT"
-							fontWeight={700}
-							letterSpacing="1px"
-						/>
-						<Badge
-							content="MILESTONE"
-							fontWeight={700}
-							letterSpacing="1px"
-						/>
+						{[
+							"about",
+							"milestone"
+						].map((value: string) => 
+							<Badge
+								content={value.toUpperCase()}
+								fontWeight={700}
+								letterSpacing="1px"
+							/>
+						)}
 					</BadgeList>
 					<Label
 						type="title section"
@@ -45,16 +45,45 @@ export const AboutMePage
 
 					<ul className="exp">
 						<li className="list">
-							<div className="data-date"> 2021-now </div>
-							<div className="type"> Rumah123 (99 Group) - Fulltime </div>
+							<div className="data-date"> 2022-now </div>
+							<div className="type"> DKATALIS - FULLTIME </div>
 							<div className="title">
-								FULLSTACK ENGINEER&nbsp;&nbsp;
+								SENIOR ENGINEER&nbsp;&nbsp;
 								<Badge
 									content="current"
 									fontWeight={700}
 									backgroundColor={darken(.2, Color.info)}
 									padding="calc(2px + .2vw) calc(4px + .4vw)"
 								/>
+							</div>
+							<div className="text">
+								Work close with PO and principal engineer to solve loan and banking transaction. <br /><br />
+
+								2024: Improve the pocket system for overdraft and loan. <br />
+								2023: Develop for direct lending for Jago loan. <br />
+								2023: Learn how to solve and handle the production issues. <br />
+								2023: Develop the request from user in part of loan services.
+							</div>
+						</li>
+
+						<li className="list">
+							<div className="data-date"> 2022 </div>
+							<div className="type"> Scholarindo NFT Service </div>
+							<div className="title">
+								SENIOR ENGINEER&nbsp;&nbsp;
+							</div>
+							<div className="text">
+								Ask to help refactoring the structure and system of NFT transactional website. <br /><br />
+
+								2022: Manage the front-end own libraries and tools, hope it will easier to have a horizontal scaling.
+							</div>
+						</li>
+
+						<li className="list">
+							<div className="data-date"> 2021-2022 </div>
+							<div className="type"> Rumah123 (99 Group) - Fulltime </div>
+							<div className="title">
+								FULLSTACK ENGINEER&nbsp;&nbsp;
 							</div>
 							<div className="text">
 								Create and maintain the system for Agent Business Team. <br />
@@ -73,16 +102,10 @@ export const AboutMePage
 						</li>
 
 						<li className="list">
-							<div className="data-date"> 2021-now </div>
+							<div className="data-date"> 2021-2022 </div>
 							<div className="type"> Anak Panah Cyberschool - FREELANCE </div>
 							<div className="title">
 								EXTRACURRICULAR TEACHER&nbsp;&nbsp;
-								<Badge
-									content="current"
-									fontWeight={700}
-									backgroundColor={darken(.2, Color.info)}
-									padding="calc(2px + .2vw) calc(4px + .4vw)"
-								/>
 							</div>
 							<div className="text">
 								Help the student understand how the code works. <br />
@@ -107,6 +130,7 @@ export const AboutMePage
 								Research for technical things which new for team. <br />
 								Do technical documentation and create TSD. <br />
 								Maintain GIT (Bitbucket), Google Analytics, Firebase, DataStudio. <br /><br />
+
 								2021: Create MyJPCC backbone with Ionic 5. <br />
 								2021: Implement Miro for discussion, make flow and diagrams. <br />
 								2021: Research for Websocket service for payment notification.
@@ -122,21 +146,17 @@ export const AboutMePage
 								Maintain projects&apos; package versions. <br />
 								Learn to lead a small programming team. <br />
 								Creating database diagrams based on business process. <br /> <br />
-								2021: Learn &amp; implement Whatsapp (non-business account) Robot with Python-Selenium-Pusher (socket). <br />
-								2021: Learn &amp; implement websocket programming (Pusher.js) for chatroll system. <br />
+
+								2021: Make Whatsapp Bot (non-business account) with Python-Selenium-Pusher (socket). <br />
+								2021: Use pusher.js to create chatroll system. <br />
 								2020: Upgrade several programs to Angular CLI and maintain SEO. <br />
-								2020: Learn &amp; implement Midtrans for payment process. <br />
-								2020: Learn &amp; implement NusaSMS and Twilio for sending SMS OTP. <br />
-								2020: Create parsial backup system between two servers with Laravel-Angularjs. <br />
-								2020: Learn how to use Firewall WHM system. <br />
-								2020: Create <a href="https://jpcc.tv">JPCC TV</a> backend system based on Laravel 7. <br />
-								2020: Create <a href="https://jpcc.tv">JPCC TV</a> frontend with Angular 10, implementing video.js, Nginx, Redhat, OBS for livestreaming. <br />
+								2020: Learn &amp; implement SMS gateway, payment gateway, and some third party connection app. <br />
+								2020: Initiate a church web streamer, with primarily using video.js <br />
 								2020: Create script for auto downloading from Youtube videos with youtube-dl. <br />
 								2020: Create Google Analytics and Google DataStudio system for <a href="https://jpcc.tv">JPCC TV</a>. <br />
-								2020: Create hosting environment in a VPS based on CentOS 7. <br />
-								2020: Implement staging step and version control for some repositories. <br />
+								2020: Improve the CI/CD system and manage staging environment. <br />
 								2020: Maintain logs for automatic Cron Job. <br />
-								2020: Learn &amp; use EXIM to send bulk email.
+								2020: Learn &amp; utilize EXIM to send bulk email.
 							</div>
 						</li>
 

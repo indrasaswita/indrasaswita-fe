@@ -35,7 +35,7 @@ export const HeaderV1
 						className="very-top-info"
 					>
 						<div className="info-text">
-							This site is currently under construction
+							Want to know me more?
 						</div>
 						<div className="location">
 							<FontAwesomeIcon
