@@ -1,4 +1,5 @@
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
 interface WrapperProps {
 	width?: string | number,
@@ -10,8 +11,9 @@ interface WrapperProps {
 	fontWeight?: string | number,
 }
 
+type Props = ComponentProps<"div"> | WrapperProps
 export const Wrapper
-	: StyledComponent<"div", any, WrapperProps, never>
+	: IStyledComponent<"web", Props>
 	= styled.div`
 
 		max-width: ${(p: WrapperProps) => (!p.lineWidth && p.width) ? (typeof p.width === "number" ? p.width + "px" : p.width) : "auto"};

@@ -1,8 +1,10 @@
-import styled, { StyledComponent } from "styled-components"
+import styled, { IStyledComponent } from "styled-components"
 import { device } from "@styles/mixins/media-width.mixin"
+import { ComponentProps } from "react"
 
+type Props = ComponentProps<"div">
 export const Wrapper
-	: StyledComponent<"div", any, {}, never>
+	: IStyledComponent<"web", Props>
 	= styled.div`
 
 		width: 100%;

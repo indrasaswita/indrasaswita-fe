@@ -3,7 +3,7 @@
 		"scope": "typescript,typescriptreact",
 		"prefix": "comp-style",
 		"body": [
-			"import styled, { StyledComponent } from \"styled-components\"",
+			"import styled, { IStyledComponent } from \"styled-components\"",
 			"",
 			"export const Wrapper",
 			"  : StyledComponent<\"div\", any, {}, never>",

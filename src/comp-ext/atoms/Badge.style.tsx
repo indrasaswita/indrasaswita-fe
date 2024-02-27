@@ -1,5 +1,6 @@
 import Color from "@styles/themes/default/variable.mixin"
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
 export interface WrapperProps {
 	color?: string,
@@ -10,8 +11,9 @@ export interface WrapperProps {
 	letterSpacing?: string | number,
 }
 
+type Props = ComponentProps<"div"> | WrapperProps
 export const Wrapper
-	: StyledComponent<"div", any, WrapperProps, never>
+	: IStyledComponent<"web", Props>
 	= styled.div<WrapperProps>`
 	
 		font-size: ${(p: WrapperProps) => p.fontSize ? p.fontSize : "80%"};

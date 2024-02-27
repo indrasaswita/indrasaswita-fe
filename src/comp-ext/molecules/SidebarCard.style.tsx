@@ -1,8 +1,10 @@
 import Color from "@styles/themes/default/variable.mixin"
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
+type Props = ComponentProps<"div">
 export const Wrapper
-	: StyledComponent<"div", any, {}, never>
+	: IStyledComponent<"web", Props>
 	= styled.div`
 
 		padding: 0;

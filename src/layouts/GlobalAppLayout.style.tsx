@@ -1,8 +1,10 @@
 import { device } from "@styles/mixins/media-width.mixin"
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
+type Props = ComponentProps<"div">
 export const GlobalAppWrapper
-	: StyledComponent<"div", any, {}, never>
+	: IStyledComponent<"web", Props>
 	= styled.div`
 
 		@media ${device.mobileP} {

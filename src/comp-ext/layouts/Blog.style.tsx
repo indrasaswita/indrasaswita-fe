@@ -1,20 +1,14 @@
 import { device } from "@styles/mixins/media-width.mixin"
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
+type Props = ComponentProps<"div">
 export const Wrapper
-	: StyledComponent<"div", any, {}, never>
+	: IStyledComponent<"web", Props>
 	= styled.div`
 
 		@media ${device.tabletLUp} {
 			flex-direction: row;
-
-			// .blog-content {
-			// 	width: calc(8/12*100%);
-			// }
-
-			// .sidebar-wrapper {
-			// 	width: calc(4/12*100%);
-			// }
 		}
 
 		@media ${device.tabletPDown} {

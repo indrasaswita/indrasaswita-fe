@@ -1,48 +1,50 @@
 import { device } from "@styles/mixins/media-width.mixin"
 import Color from "@styles/themes/default/variable.mixin"
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
 interface WrapperProps {
-	maxColumn?: number,
+	$maxColumn?: number,
 }
 
+type Props = ComponentProps<"div"> | WrapperProps
 export const Wrapper
-	: StyledComponent<"div", any, WrapperProps, never>
+	: IStyledComponent<"web", Props>
 	= styled.div<WrapperProps>`
 
 		@media ${device.mobileP} {
 			.blog-list-wrapper {
-				grid-template-columns: repeat(min(1, ${(p: WrapperProps) => p.maxColumn}), 1fr);
+				grid-template-columns: repeat(min(1, ${(p: WrapperProps) => p.$maxColumn}), 1fr);
 			}
 		}
 
 		@media ${device.mobileL} {
 			.blog-list-wrapper {
-				grid-template-columns: repeat(min(2, ${(p: WrapperProps) => p.maxColumn}), 1fr);
+				grid-template-columns: repeat(min(2, ${(p: WrapperProps) => p.$maxColumn}), 1fr);
 			}
 		}
 
 		@media ${device.tabletP} {
 			.blog-list-wrapper {
-				grid-template-columns: repeat(min(3, ${(p: WrapperProps) => p.maxColumn}), 1fr);
+				grid-template-columns: repeat(min(3, ${(p: WrapperProps) => p.$maxColumn}), 1fr);
 			}
 		}
 
 		@media ${device.tabletL} {
 			.blog-list-wrapper {
-				grid-template-columns: repeat(min(4, ${(p: WrapperProps) => p.maxColumn}), 1fr);
+				grid-template-columns: repeat(min(4, ${(p: WrapperProps) => p.$maxColumn}), 1fr);
 			}
 		}
 
 		@media ${device.desktopS} {
 			.blog-list-wrapper {
-				grid-template-columns: repeat(min(4, ${(p: WrapperProps) => p.maxColumn}), 1fr);
+				grid-template-columns: repeat(min(4, ${(p: WrapperProps) => p.$maxColumn}), 1fr);
 			}
 		}
 
 		@media ${device.desktopMUp} {
 			.blog-list-wrapper {
-				grid-template-columns: repeat(min(5, ${(p: WrapperProps) => p.maxColumn}), 1fr);
+				grid-template-columns: repeat(min(5, ${(p: WrapperProps) => p.$maxColumn}), 1fr);
 			}
 		}
 

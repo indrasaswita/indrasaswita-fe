@@ -1,4 +1,5 @@
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
 export interface WrapperProps {
 	backgroundColor?: string,
@@ -7,8 +8,9 @@ export interface WrapperProps {
 	margin?: string,
 }
 
+type Props = ComponentProps<"div"> | WrapperProps
 export const Wrapper
-	: StyledComponent<"div", any, WrapperProps, never>
+	: IStyledComponent<"web", Props>
 	= styled.div`
 
 		background-color: ${(p: WrapperProps) => p.backgroundColor ? p.backgroundColor : "inherit"};

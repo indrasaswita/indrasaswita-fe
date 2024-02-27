@@ -5,7 +5,7 @@
  * @since 2021-01-17
  */
 
-import { css, FlattenSimpleInterpolation } from "styled-components"
+import { css, Interpolation } from "styled-components"
 
 export type ButtonStyleProps = {
 	borderColor: string,
@@ -16,8 +16,8 @@ export type ButtonStyleProps = {
 }
 
 export const buttonStyle
-: (props: ButtonStyleProps) => FlattenSimpleInterpolation
-= (props: ButtonStyleProps): FlattenSimpleInterpolation => css`
+: (props: ButtonStyleProps) => Interpolation<ButtonStyleProps>
+= (props: ButtonStyleProps): Interpolation<ButtonStyleProps> => css`
 	border-color: ${props.borderColor};
 	background-color: ${props.backgroundColor};
 	color: ${props.color};
@@ -36,8 +36,8 @@ export const buttonStyle
  `
 
 export const buttonStyleInvert
-: (props: ButtonStyleProps) => FlattenSimpleInterpolation
-= (props: ButtonStyleProps): FlattenSimpleInterpolation => css`
+: (props: ButtonStyleProps) => Interpolation<ButtonStyleProps>
+= (props: ButtonStyleProps): Interpolation<ButtonStyleProps> => css`
 	border-color: ${props.backgroundColor};
 	background-color: white;
 	color: ${props.backgroundColor};

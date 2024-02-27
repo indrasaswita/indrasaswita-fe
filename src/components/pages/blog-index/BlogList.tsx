@@ -18,7 +18,7 @@ export const BlogList
 	= (props: BlogListProps) => {
 		return (
 			<Wrapper
-				maxColumn={props.isHomeSection ? 3 : 99}
+				$maxColumn={props.isHomeSection ? 3 : 99}
 			>
 
 				<HomeSection

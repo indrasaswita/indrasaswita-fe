@@ -1,11 +1,13 @@
-import styled, { StyledComponent } from "styled-components"
+import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
 interface WrapperProps {
 	readonly show?: boolean,
 }
 
+type Props = ComponentProps<"div"> | WrapperProps
 export const Wrapper
-	: StyledComponent<"div", any, WrapperProps, never>
+	: IStyledComponent<"web", Props>
 	= styled.div<WrapperProps>`
 
 		${(p: WrapperProps) => !p.show ? `
