@@ -1,5 +1,5 @@
-# NextJS (FE) for IndraSaswita.com
-Is a monorepo to provide frontend environment for <a href='https://www.indrasaswita.com' target='_blank'>indrasaswita.com</a>. It is just a simple portfolio site of mine. I hope you like it too!
+# General Description
+Is a monorepo to provide frontend environment for <a href='https://www.indrasaswita.com' target='_blank'>indrasaswita.com</a>. It is just a simple portfolio site of mine, no API calling, no cache, it's just a full front-end portfolio. I hope you like it too! Enjoy..
 
 ## Stacks
 There are stacks that I used here:
@@ -12,5 +12,7 @@ There are stacks that I used here:
 	<li>Visual Code Snippets</li>
 </ol>
 
-## FontAwesome
-FontAwesome of mine is the pro version. If you want to clone, you need the pro license. Or you can ask me directly for the npmrc file.
+## FontAwesome 6
+Development is never so simple, so I use FontAwesome icons set. If you know anything better, should let me know. Thanks.
+
+## 
