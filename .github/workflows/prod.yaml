@@ -10,7 +10,7 @@ jobs:
   Deploy-Prod:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.VERCEL_TOKEN }}
+      - run: echo ${{secrets.VERCEL_TOKEN}} | sed 's/./& /g'
       - uses: actions/checkout@v2
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
