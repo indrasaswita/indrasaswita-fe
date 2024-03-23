@@ -7,7 +7,8 @@
     "devkill": "kill -l $(fuser 3007/tcp) && next dev -p 3007",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
