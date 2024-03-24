@@ -15,4 +15,8 @@ There are stacks that I used here:
 ## FontAwesome 6
 Development is never so simple, so I use FontAwesome icons set. If you know anything better, should let me know. Thanks.
 
-## 
+## Tools
+What I'm using is:
+- VS Code (IDE settings embeded)
+- NextJS with Vercel serverless platform
+- Github action
