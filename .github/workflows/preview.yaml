@@ -11,7 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Lint
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Run CI command
+        run: run ci
+      - name: Check Linting
         run: npm run lint
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
