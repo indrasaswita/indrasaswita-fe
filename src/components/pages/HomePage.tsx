@@ -60,6 +60,7 @@ export const HomePage
 				<BlogList
 					isHomeSection
 				/>
+				This is test 2
 
 				<HomeSection
 					categories={["About"]}
