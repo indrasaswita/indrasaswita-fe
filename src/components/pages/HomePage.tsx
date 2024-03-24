@@ -65,7 +65,7 @@ export const HomePage
 					categories={["About"]}
 					title={"About Me"}
 					backgroundColor="#EEE"
-					headlineUrl={isSmallScreen ? null : "https://indrasaswita.s3.ap-southeast-1.amazonaws.com/personal/aboutme-cover.jpg"}
+					headlineUrl={isSmallScreen ? null : "/assets/images/aboutme_v1.jpg"}
 				>
 					<Divider
 						text="Full Stack Engineer"
