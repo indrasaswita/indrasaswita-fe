@@ -9,7 +9,6 @@ const DynamicHeaderFooterLayout = dynamic(() => import("@layouts/HeaderFooterLay
 	suspense: true,
 })
 
-
 const Home
 : FC
 = (props: any) => {
@@ -26,10 +25,9 @@ const Home
 
 }
 
-
 export const getStaticProps
 	= (async () => {
-		const vars = await get('vars');
+		const vars = await get("vars")
 
 		return {
 			props: {
