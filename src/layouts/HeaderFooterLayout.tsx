@@ -5,6 +5,7 @@ import {
 	faNpm as fabNpm,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Analytics } from "@vercel/analytics/react"
 import React, { ReactNode } from "react"
 import ContentWrapper from "./ContentWrapper"
 import { Wrapper } from "./HeaderFooterLayout.style"
@@ -38,6 +39,7 @@ export const HeaderFooterLayout
 				</div>
 				<div className="content-wrapper">
 					{props.children}
+					<Analytics />
 				</div>
 				<div className="footer-wrapper">
 					<ContentWrapper
