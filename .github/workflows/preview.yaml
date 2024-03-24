@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Run CI command
-        run: run ci
+        run: npm ci
       - name: Check Linting
         run: npm run lint
       - name: Install Vercel CLI
