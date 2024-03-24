@@ -1,38 +1,35 @@
+import HomePage from "@components/pages/HomePage"
+import { get } from "@vercel/edge-config"
+import { GetStaticProps } from "next"
 import dynamic from "next/dynamic"
-import { GetStaticProps } from "next/types"
 import { FC, Suspense } from "react"
 
-// eslint-disable-next-line @typescript-eslint/typedef
 const DynamicHeaderFooterLayout = dynamic(() => import("@layouts/HeaderFooterLayout"), {
 	loading: () => <p>Loading...</p>,
 	suspense: true,
 })
-// eslint-disable-next-line @typescript-eslint/typedef
-const DynamicHome = dynamic(() => import("@components/pages/HomePage"), {
-	loading: () => <p>Loading...</p>,
-	suspense: true,
-})
+
 
 const Home
 : FC
-= () => {
+= (props: any) => {
 
 	return (
 		<Suspense
-			fallback={<p>Loading...</p>}
+			fallback={<p>{props.vars.loadingText || ""}</p>}
 		>
 			<DynamicHeaderFooterLayout>
-				<DynamicHome />
+				<HomePage />
 			</DynamicHeaderFooterLayout>
 		</Suspense>
 	)
 
 }
 
-// eslint-disable-next-line no-unused-vars
+
 export const getStaticProps
-	: GetStaticProps
-	= async () => {
+	= (async () => {
+		const vars = await get('vars');
 
 		return {
 			props: {
@@ -41,9 +38,10 @@ export const getStaticProps
 					description: "Let's learn together and share the joy",
 					meta: [],
 				},
+				vars,
 			},
 			revalidate: 600,
 		}
-	}
+	}) satisfies GetStaticProps
 
 export default Home

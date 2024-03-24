@@ -20,3 +20,4 @@ What I'm using is:
 - VS Code (IDE settings embeded)
 - NextJS with Vercel serverless platform
 - Github action
+- Vercel Egde (exploring), due free plan

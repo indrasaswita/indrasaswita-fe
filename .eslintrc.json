@@ -89,14 +89,14 @@
 		"operator-linebreak": [
 			"error",
 			"before"
-		],
-		"@typescript-eslint/typedef": [
-			"error",
-			{
-				"arrowParameter": true,
-				"variableDeclaration": true
-			}
 		]
+		// "@typescript-eslint/typedef": [
+		// 	"error",
+		// 	{
+		// 		"arrowParameter": true,
+		// 		"variableDeclaration": true
+		// 	}
+		// ]
   },
 	"globals": {
 		"JSX": true,
