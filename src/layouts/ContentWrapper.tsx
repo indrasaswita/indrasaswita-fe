@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import React, { ReactNode } from "react"
 import { Wrapper } from "./ContentWrapper.style"
 
@@ -14,6 +15,7 @@ export const ContentWrapper
 				className={props.className}
 			>
 				{props.children}
+				<Analytics />
 			</Wrapper>
 		)
 	}
