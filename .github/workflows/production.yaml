@@ -2,6 +2,7 @@ name: Prod Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  EDGE_CONFIG: ${{ secrets.EDGE_CONFIG }}
 on:
   release:
     types:
