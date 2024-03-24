@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import React, { ReactNode } from "react"
 import { Wrapper } from "./ContentWrapper.style"
 
@@ -16,6 +17,7 @@ export const ContentWrapper
 			>
 				{props.children}
 				<Analytics />
+				<SpeedInsights />
 			</Wrapper>
 		)
 	}
