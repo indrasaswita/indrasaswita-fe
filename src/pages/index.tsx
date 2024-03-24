@@ -27,6 +27,7 @@ export const getStaticProps
 					meta: [],
 				},
 			},
+			revalidate: 600,
 		}
 	}
 
