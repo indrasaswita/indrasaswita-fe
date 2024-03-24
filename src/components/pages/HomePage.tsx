@@ -78,7 +78,10 @@ export const HomePage
 					/>
 
 					<p>
-						As a recent graduate from Binus University of Computer Science, I am excited to begin my career in the field of computer engineering and love to learn new algorithm and programming language. Please look at my resume below, to know me better.
+						As an engineer, I am excited to improve my code style and knowledge. I also love learning about AI and automation. With coding in {(new Date()).getUTCFullYear()}, automation skills is essential, as there are so many AI tools available to support our continiuous development.
+						<br /><br />
+
+						Please take a look at my resume below, to know me better.
 					</p>
 
 					<Button

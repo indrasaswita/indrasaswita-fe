@@ -40,7 +40,7 @@ export const Wrapper
 				.section {
 	
 					&-content-wrapper {
-						padding: calc(5px + .5vw) 0;
+						padding-top: calc(5px + .5vw);
 					}
 	
 				}
