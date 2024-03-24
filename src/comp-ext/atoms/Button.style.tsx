@@ -1,8 +1,8 @@
-import styled, { IStyledComponent } from "styled-components"
 import { buttonStyle, buttonStyleInvert, ButtonStyleProps } from "@styles/mixins/button-style.mixin"
-import { darken } from "polished"
 import Color from "@styles/themes/default/variable.mixin"
+import { darken } from "polished"
 import { ComponentProps } from "react"
+import styled, { IStyledComponent } from "styled-components"
 
 export type WrapperProps = {
   readonly width?: string,
@@ -100,7 +100,7 @@ const whatsappProps: ButtonStyleProps = {
 	colorHover: "white",
 }
 
-type Props = ComponentProps<"div"> | WrapperProps
+type Props = ComponentProps<"div"> & WrapperProps
 export const Wrapper
 	: IStyledComponent<"web", Props>
 	= styled.div<WrapperProps>`

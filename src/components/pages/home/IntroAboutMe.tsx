@@ -1,11 +1,11 @@
-import ContentWrapper from "@layouts/ContentWrapper"
-import React from "react"
 import {
 	faGithub as fabGithub,
 	faLinkedin as fabLinkedin,
 	faNpm as fabNpm,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import ContentWrapper from "@layouts/ContentWrapper"
+import React from "react"
 import { Wrapper } from "./IntroAboutMe.style"
 
 export interface IntroAboutMeProps {

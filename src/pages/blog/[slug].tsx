@@ -1,10 +1,10 @@
-import { FC } from "react"
-import HeaderFooterLayout from "@layouts/HeaderFooterLayout"
 import BlogPage from "@components/pages/BlogPage"
+import HeaderFooterLayout from "@layouts/HeaderFooterLayout"
+import { FC } from "react"
 
-import { NextRouter, useRouter } from "next/router"
 import { blogData } from "__mock__/blog.data"
 import { GetServerSideProps } from "next"
+import { NextRouter, useRouter } from "next/router"
 
 const Blog
 : FC
@@ -47,6 +47,7 @@ export const getServerSideProps
 					meta: [],
 				},
 			},
+			revalidate: 600,
 		}
 	}
 

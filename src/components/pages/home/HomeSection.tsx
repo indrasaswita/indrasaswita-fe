@@ -24,10 +24,10 @@ export const HomeSection
 	= (props: HomeSectionProps) => {
 		return (
 			<Wrapper
-				backgroundColor={props.backgroundColor}
-				color={props.color}
-				padding={props.padding}
-				margin={props.margin}
+				$backgroundColor={props.backgroundColor}
+				$color={props.color}
+				$padding={props.padding}
+				$margin={props.margin}
 			>
 				<ContentWrapper
 					className="flex-box"

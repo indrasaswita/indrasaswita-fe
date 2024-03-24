@@ -17,13 +17,13 @@ export const Divider
 	= (props: DividerProps) => {
 		return (
 			<Wrapper
-				width={props.width}
-				lineWidth={props.lineWidth}
-				lineColor={props.lineColor}
-				lineLength={props.lineLength}
-				color={props.color}
-				fontSize={props.fontSize}
-				fontWeight={props.fontWeight}
+				$width={props.width}
+				$lineWidth={props.lineWidth}
+				$lineColor={props.lineColor}
+				$lineLength={props.lineLength}
+				$color={props.color}
+				$fontSize={props.fontSize}
+				$fontWeight={props.fontWeight}
 			>
 				<div className="line"></div>
 				{props.text && (

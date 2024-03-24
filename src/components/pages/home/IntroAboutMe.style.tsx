@@ -7,6 +7,7 @@ import styled, { IStyledComponent } from "styled-components"
 const gradCol1: string = darken(.1, Color.danger)
 const gradCol2: string = darken(.35, Color.danger)
 
+// background-image: url('https://indrasaswita.com/assets/images/cover-is.png');
 type Props = ComponentProps<"div">
 export const Wrapper
 	: IStyledComponent<"web", Props>
@@ -21,7 +22,6 @@ export const Wrapper
 		}
 
 		@media ${device.tabletLUp} {
-			background-image: url('https://indrasaswita.com/assets/images/cover-is.png');
 			background-position: top center;
 			background-size: cover;
 			background-color: #E3E3E3;
