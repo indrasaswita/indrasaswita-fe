@@ -1,7 +1,7 @@
-import { FC } from "react"
-import HeaderFooterLayout from "@layouts/HeaderFooterLayout"
 import BlogIndexPage from "@components/pages/BlogIndexPage"
+import HeaderFooterLayout from "@layouts/HeaderFooterLayout"
 import { GetStaticProps } from "next"
+import { FC } from "react"
 
 const Blog
 : FC
@@ -27,6 +27,7 @@ export const getStaticProps
 					meta: [],
 				},
 			},
+			revalidate: 600,
 		}
 	}
 

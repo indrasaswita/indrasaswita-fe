@@ -2,15 +2,15 @@ import { ComponentProps } from "react"
 import styled, { IStyledComponent } from "styled-components"
 
 interface WrapperProps {
-	readonly show?: boolean,
+	readonly $show?: boolean,
 }
 
-type Props = ComponentProps<"div"> | WrapperProps
+type Props = ComponentProps<"div"> & WrapperProps
 export const Wrapper
 	: IStyledComponent<"web", Props>
 	= styled.div<WrapperProps>`
 
-		${(p: WrapperProps) => !p.show ? `
+		${(p: WrapperProps) => !p.$show ? `
 			display: none;
 		` : ""}
 

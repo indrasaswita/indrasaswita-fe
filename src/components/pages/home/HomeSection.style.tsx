@@ -2,21 +2,21 @@ import { ComponentProps } from "react"
 import styled, { IStyledComponent } from "styled-components"
 
 export interface WrapperProps {
-	backgroundColor?: string,
-	color?: string,
-	padding?: string,
-	margin?: string,
+	$backgroundColor?: string,
+	$color?: string,
+	$padding?: string,
+	$margin?: string,
 }
 
-type Props = ComponentProps<"div"> | WrapperProps
+type Props = ComponentProps<"div"> & WrapperProps
 export const Wrapper
 	: IStyledComponent<"web", Props>
 	= styled.div`
 
-		background-color: ${(p: WrapperProps) => p.backgroundColor ? p.backgroundColor : "inherit"};
-		color: ${(p: WrapperProps) => p.color ? p.color : "inherit"};
-		padding: ${(p: WrapperProps) => p.padding ? p.padding : "calc(8px + .8vw) 0"};
-		margin: ${(p: WrapperProps) => p.margin ? p.margin : "0"};
+		background-color: ${(p: WrapperProps) => p.$backgroundColor ? p.$backgroundColor : "inherit"};
+		color: ${(p: WrapperProps) => p.$color ? p.$color : "inherit"};
+		padding: ${(p: WrapperProps) => p.$padding ? p.$padding : "calc(8px + .8vw) 0"};
+		margin: ${(p: WrapperProps) => p.$margin ? p.$margin : "0"};
 
 		> .flex-box {
 

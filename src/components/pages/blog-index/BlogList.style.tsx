@@ -7,7 +7,7 @@ interface WrapperProps {
 	$maxColumn?: number,
 }
 
-type Props = ComponentProps<"div"> | WrapperProps
+type Props = ComponentProps<"div"> & WrapperProps
 export const Wrapper
 	: IStyledComponent<"web", Props>
 	= styled.div<WrapperProps>`

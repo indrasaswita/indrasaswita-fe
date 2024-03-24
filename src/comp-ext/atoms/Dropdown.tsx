@@ -13,7 +13,7 @@ export const Dropdown
 
 		return (
 			<Wrapper
-				show={props.show}
+				$show={props.show}
 			>
 				<div className="dropdown-list">
 					{props

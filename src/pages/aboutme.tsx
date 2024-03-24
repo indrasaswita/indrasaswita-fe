@@ -1,7 +1,7 @@
 import AboutMePage from "@components/pages/AboutMePage"
-import { FC } from "react"
 import HeaderFooterLayout from "@layouts/HeaderFooterLayout"
 import { GetStaticProps } from "next"
+import { FC } from "react"
 
 const AboutMe
 : FC
@@ -27,6 +27,7 @@ export const getStaticProps
 					meta: [],
 				},
 			},
+			revalidate: 600,
 		}
 	}
 
